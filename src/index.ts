@@ -1,8 +1,16 @@
-/**
- * The version of this package you are currently using.
- * This can be used to display the version of the package in your application.
- *
- * Note to TRC developers: This needs to explicitly be `string` so it is not typed as the string that gets replaced by esbuild
- */
-// eslint-disable-next-line @typescript-eslint/no-inferrable-types
-export const version: string = "[VI]{{inject}}[/VI]";
+import { Client } from "#lib";
+import "./container";
+import { container } from "@sapphire/framework";
+import path from "node:path";
+
+async function main() {
+	const client = new Client();
+
+	container.stores
+		.get("listeners")
+		.registerPath(path.join(__dirname, "events"));
+
+	await client.login();
+}
+
+void main();
