@@ -910,9 +910,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@theravenouscorporate/ts-template@workspace:.":
+"@theravenouscorporate/bot-template@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@theravenouscorporate/ts-template@workspace:."
+  resolution: "@theravenouscorporate/bot-template@workspace:."
   dependencies:
     "@commitlint/cli": ^17.6.6
     "@commitlint/config-conventional": ^17.6.6

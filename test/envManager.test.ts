@@ -36,7 +36,9 @@ describe("EnvManager tests", () => {
 
 		const manager = new EnvManager({
 			env,
-			path: withPath ? path.resolve(__dirname, "test.env") : undefined
+			path: withPath
+				? path.resolve(process.cwd(), ".env.test")
+				: undefined
 		});
 
 		process.env.NODE_ENV = oldEnv;
